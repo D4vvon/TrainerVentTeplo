@@ -1,0 +1,15 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\diplomprojectile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\diplomeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\development\\diplom\\definitions.diplom.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplomprojectile.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\diplomprojectile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

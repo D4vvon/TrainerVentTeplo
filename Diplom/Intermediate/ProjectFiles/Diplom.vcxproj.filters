@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Diplom.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Diplom.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\DiplomEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Diplom">
+      <UniqueIdentifier>{31EEE05D-7F7F-39D1-9C4C-9808325EC119}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Diplom\Diplom.Build.cs">
+      <Filter>Source\Diplom</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Diplom\Diplom.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Diplom.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\DiplomCharacter.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\DiplomCharacter.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\DiplomGameMode.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\DiplomGameMode.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\DiplomProjectile.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\DiplomProjectile.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\TP_PickUpComponent.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\TP_PickUpComponent.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\TP_WeaponComponent.cpp">
+      <Filter>Source\Diplom</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\TP_WeaponComponent.h">
+      <Filter>Source\Diplom</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
