@@ -29,6 +29,12 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\Diplom">
       <UniqueIdentifier>{31EEE05D-7F7F-39D1-9C4C-9808325EC119}</UniqueIdentifier>
     </Filter>
@@ -70,6 +76,72 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Diplom\TP_WeaponComponent.h">
       <Filter>Source\Diplom</Filter>
+    </ClInclude>
+    <Filter Include="Source\Diplom\Actors">
+      <UniqueIdentifier>{42E2DEF5-CE6D-3C25-9DE8-673B9856DD74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Diplom\Actors\Interactable">
+      <UniqueIdentifier>{0408651E-E0A7-3671-B21B-D47F8A628C08}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Diplom\Actors\Interactable\Interactive.cpp">
+      <Filter>Source\Diplom\Actors\Interactable</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Actors\Interactable\Interactive.h">
+      <Filter>Source\Diplom\Actors\Interactable</Filter>
+    </ClInclude>
+    <Filter Include="Source\Diplom\Actors\Interactable\MechamismComponents">
+      <UniqueIdentifier>{4F122DE4-69C6-34A1-BE2B-D39445406F35}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Diplom\Actors\Interactable\MechamismComponents\ComponentOfMechanism.cpp">
+      <Filter>Source\Diplom\Actors\Interactable\MechamismComponents</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Actors\Interactable\MechamismComponents\ComponentOfMechanism.h">
+      <Filter>Source\Diplom\Actors\Interactable\MechamismComponents</Filter>
+    </ClInclude>
+    <Filter Include="Source\Diplom\Characters">
+      <UniqueIdentifier>{8508F298-7C4A-3D9E-B0E3-EDCE9A9155F4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Diplom\Characters\DBaseCharacter.cpp">
+      <Filter>Source\Diplom\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Characters\DBaseCharacter.h">
+      <Filter>Source\Diplom\Characters</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\Characters\PlayerCharacter.cpp">
+      <Filter>Source\Diplom\Characters</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Characters\PlayerCharacter.h">
+      <Filter>Source\Diplom\Characters</Filter>
+    </ClInclude>
+    <Filter Include="Source\Diplom\Characters\Controllers">
+      <UniqueIdentifier>{E70F05E4-7C25-3C5C-843A-45E61F122EC2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Diplom\Characters\Controllers\DPlayerController.cpp">
+      <Filter>Source\Diplom\Characters\Controllers</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\Characters\Controllers\DPlayerController.h">
+      <Filter>Source\Diplom\Characters\Controllers</Filter>
+    </ClInclude>
+    <Filter Include="Source\Diplom\UI">
+      <UniqueIdentifier>{8B0E5A18-763B-3875-AD32-6D882EA63060}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Diplom\UI\HighLightInteractable.cpp">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\UI\HighLightInteractable.h">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\UI\MainMenuWidget.cpp">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\UI\MainMenuWidget.h">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\UI\PlayerHUDWidget.cpp">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\UI\PlayerHUDWidget.h">
+      <Filter>Source\Diplom\UI</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

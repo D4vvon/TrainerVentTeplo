@@ -58,9 +58,6 @@ void ADiplomCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 	// Bind fire event
 	PlayerInputComponent->BindAction("PrimaryAction", IE_Pressed, this, &ADiplomCharacter::OnPrimaryAction);
 
-	// Enable touchscreen input
-	EnableTouchscreenMovement(PlayerInputComponent);
-
 	// Bind movement events
 	PlayerInputComponent->BindAxis("Move Forward / Backward", this, &ADiplomCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("Move Right / Left", this, &ADiplomCharacter::MoveRight);
@@ -77,32 +74,7 @@ void ADiplomCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerIn
 void ADiplomCharacter::OnPrimaryAction()
 {
 	// Trigger the OnItemUsed Event
-	OnUseItem.Broadcast();
-}
-
-void ADiplomCharacter::BeginTouch(const ETouchIndex::Type FingerIndex, const FVector Location)
-{
-	if (TouchItem.bIsPressed == true)
-	{
-		return;
-	}
-	if ((FingerIndex == TouchItem.FingerIndex) && (TouchItem.bMoved == false))
-	{
-		OnPrimaryAction();
-	}
-	TouchItem.bIsPressed = true;
-	TouchItem.FingerIndex = FingerIndex;
-	TouchItem.Location = Location;
-	TouchItem.bMoved = false;
-}
-
-void ADiplomCharacter::EndTouch(const ETouchIndex::Type FingerIndex, const FVector Location)
-{
-	if (TouchItem.bIsPressed == false)
-	{
-		return;
-	}
-	TouchItem.bIsPressed = false;
+	//OnUseItem.Broadcast();
 }
 
 void ADiplomCharacter::MoveForward(float Value)
@@ -133,17 +105,4 @@ void ADiplomCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * TurnRateGamepad * GetWorld()->GetDeltaSeconds());
-}
-
-bool ADiplomCharacter::EnableTouchscreenMovement(class UInputComponent* PlayerInputComponent)
-{
-	if (FPlatformMisc::SupportsTouchInput() || GetDefault<UInputSettings>()->bUseMouseForTouch)
-	{
-		PlayerInputComponent->BindTouch(EInputEvent::IE_Pressed, this, &ADiplomCharacter::BeginTouch);
-		PlayerInputComponent->BindTouch(EInputEvent::IE_Released, this, &ADiplomCharacter::EndTouch);
-
-		return true;
-	}
-	
-	return false;
 }

@@ -1,0 +1,14 @@
+{
+    "Version": "1.1",
+    "Data": {
+        "Source": "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\actors\\interactable\\interactive.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\diplomeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\development\\diplom\\definitions.diplom.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\actors\\interactable\\interactive.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
