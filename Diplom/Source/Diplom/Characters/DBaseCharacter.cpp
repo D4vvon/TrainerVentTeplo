@@ -29,6 +29,14 @@ void ADBaseCharacter::Interact()
 	}
 }
 
+void ADBaseCharacter::SetOpacity()
+{
+	if (LineOfSightObject.GetInterface())
+	{
+		LineOfSightObject->SetOpacity(this);
+	}
+}
+
 void ADBaseCharacter::TraceLineOfSight()
 {
 	if (!IsPlayerControlled())

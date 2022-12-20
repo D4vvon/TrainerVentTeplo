@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	DIPLOM_API UClass* Z_Construct_UClass_UPlayerHUDWidget_NoRegister();
 	DIPLOM_API UClass* Z_Construct_UClass_ADPlayerController_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterial_NoRegister();
 	DIPLOM_API UClass* Z_Construct_UClass_UInteractable_NoRegister();
 // End Cross Module References
 	void AComponentOfMechanism::StaticRegisterNativesAComponentOfMechanism()
@@ -49,6 +50,18 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Description_MetaData[];
 #endif
 		static const UECodeGen_Private::FNamePropertyParams NewProp_Description;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_BasicMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_BasicMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_InteractMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_IntersectionMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_IntersectionMaterial;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -93,11 +106,35 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 	};
 #endif
 	const UECodeGen_Private::FNamePropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_Description = { "Description", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Name, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, Description), METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_Description_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_Description_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial = { "BasicMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, BasicMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial = { "InteractMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, InteractMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial = { "IntersectionMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, IntersectionMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AComponentOfMechanism_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ComponentMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_PlayerHUDWidgetClass,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_PlayerController,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_Description,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AComponentOfMechanism_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(AComponentOfMechanism, IInteractable), false },  // 3016754657
@@ -138,9 +175,9 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AComponentOfMechanism, AComponentOfMechanism::StaticClass, TEXT("AComponentOfMechanism"), &Z_Registration_Info_UClass_AComponentOfMechanism, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AComponentOfMechanism), 1786732573U) },
+		{ Z_Construct_UClass_AComponentOfMechanism, AComponentOfMechanism::StaticClass, TEXT("AComponentOfMechanism"), &Z_Registration_Info_UClass_AComponentOfMechanism, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AComponentOfMechanism), 1560052422U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_2463899252(TEXT("/Script/Diplom"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_3884893412(TEXT("/Script/Diplom"),
 		Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

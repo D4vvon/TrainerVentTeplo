@@ -22,5 +22,6 @@ class DIPLOM_API IInteractable
 	GENERATED_BODY()
 public:
 	virtual void Interact(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::Interact, );
+	virtual void SetOpacity(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::Interact, );
 	virtual FName GetActionEventName() const PURE_VIRTUAL(IInteractable::GetActionEventName(), return FName(NAME_None););
 };

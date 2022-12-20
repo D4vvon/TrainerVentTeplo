@@ -17,6 +17,10 @@ public:
 
 	void SetHighLightInteractableActionText(FName KeyName);
 
+	void SetOpacityToHalfOfObject(UStaticMeshComponent* staticmeshcomp, UMaterialInterface* material);
+
+	void SetOpacityToFullOfObject(UStaticMeshComponent* staticmeshcomp, UMaterialInterface* material);
+
 protected:
 	UPROPERTY(meta = (BindWidget))
 	class UHighLightInteractable* InteractableKey = nullptr;

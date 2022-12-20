@@ -40,6 +40,28 @@ void AComponentOfMechanism::Interact(ADBaseCharacter* Character)
 	}
 }
 
+void AComponentOfMechanism::SetOpacity(ADBaseCharacter* Character)
+{
+	//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("SetOpacity"), false));
+	if (!IsValid(BasicMaterial) || !IsValid(InteractMaterial))
+	{
+		return;
+	}
+	if (isOpascity == false)
+	{
+		ComponentMesh->SetMaterial(0, InteractMaterial);
+		isOpascity = true;
+		return;
+	}
+
+	if (isOpascity == true)
+	{
+		ComponentMesh->SetMaterial(0, BasicMaterial);
+		isOpascity = false;
+		return;
+	}
+}
+
 FName AComponentOfMechanism::GetActionEventName() const
 {
 	return FName("ActionInteract");

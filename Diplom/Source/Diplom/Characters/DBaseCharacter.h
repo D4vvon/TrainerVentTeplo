@@ -30,6 +30,7 @@ public:
 	virtual void ChangeMouseCursor() {};
 
 	virtual void Interact();
+	virtual void SetOpacity();
 	FOnIntractableObjectFound OnIntractableObjectFound;
 
 protected:

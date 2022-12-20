@@ -36,3 +36,13 @@ void UPlayerHUDWidget::SetHighLightInteractableActionText(FName KeyName)
 
 }
 
+void UPlayerHUDWidget::SetOpacityToHalfOfObject(UStaticMeshComponent* staticmeshcomp, UMaterialInterface* material)
+{
+	staticmeshcomp->SetMaterial(0, material);
+}
+
+void UPlayerHUDWidget::SetOpacityToFullOfObject(UStaticMeshComponent* staticmeshcomp, UMaterialInterface* material)
+{
+	staticmeshcomp->SetMaterial(0, material);
+}
+

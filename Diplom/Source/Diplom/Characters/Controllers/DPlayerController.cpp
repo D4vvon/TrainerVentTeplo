@@ -13,7 +13,7 @@ void ADPlayerController::SetPawn(APawn* InPawn)
 
 	PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
 
-	ComponentsOfMechanism = Cast<AComponentOfMechanism>(CopmonentOfMechanismClass);
+	//ComponentsOfMechanism = Cast<AComponentOfMechanism>(CopmonentOfMechanismClass);
 
 	if (IsLocalController() && CachedBaseCharacter.IsValid())
 	{
@@ -32,6 +32,7 @@ void ADPlayerController::SetupInputComponent()
 	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ADPlayerController::Jump);
 	InputComponent->BindAction("ShowCursor", EInputEvent::IE_Pressed, this, &ADPlayerController::ChangeMouseCursor);
 	InputComponent->BindAction("ActionInteract", EInputEvent::IE_Pressed, this, &ADPlayerController::Interact);
+	InputComponent->BindAction("SetOpacity", EInputEvent::IE_Pressed, this, &ADPlayerController::SetOpacity);
 }
 
 void ADPlayerController::OnInteractableObjectFound(FName ActionName)
@@ -43,9 +44,11 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 	}
 	//FName ActionKey = FName("Test description");
 	//FName ActionKey = ComponentsOfMechanism->GetDesciption();
-
-	//PlayerHUDWidget->SetHighLightInteractableActionText(ActionKey);
-	PlayerHUDWidget->SetHighLightInteractableVisibility(false);
+	TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
+	const bool HasAnyKeys = ActionKeys.Num() != 0;
+	//PlayerHUDWidget->SetHighLightInteractableActionText(FName("Test"));
+	PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
+	PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
 
 }
 
@@ -112,6 +115,14 @@ void ADPlayerController::Interact()
 	if (CachedBaseCharacter.IsValid())
 	{
 		CachedBaseCharacter->Interact();
+	}
+}
+
+void ADPlayerController::SetOpacity()
+{
+	if (CachedBaseCharacter.IsValid())
+	{
+		CachedBaseCharacter->SetOpacity();
 	}
 }
 

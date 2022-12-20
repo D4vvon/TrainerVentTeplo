@@ -44,6 +44,7 @@ private:
 	void ChangeMouseCursor();
 
 	void Interact();
+	void SetOpacity();
 
 	void CreateAndInitializeWidgets();
 
