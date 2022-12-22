@@ -73,12 +73,22 @@ void AComponentOfMechanism::SetHighlightObject(ADBaseCharacter* Character)
 
 void AComponentOfMechanism::RemoveHighlightObject(ADBaseCharacter* Character)
 {
-	if (!IsValid(BasicMaterial))
+	if (!IsValid(BasicMaterial) || !IsValid(InteractMaterial))
 	{
 		return;
 	}
 
-	ComponentMesh->SetMaterial(0, BasicMaterial);
+	if (isOpascity == true)
+	{
+		ComponentMesh->SetMaterial(0, InteractMaterial);
+		return;
+	}
+
+	if (isOpascity == false)
+	{
+		ComponentMesh->SetMaterial(0, BasicMaterial);
+		return;
+	}
 }
 
 FName AComponentOfMechanism::GetActionEventName() const
