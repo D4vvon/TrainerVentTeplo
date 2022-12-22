@@ -22,6 +22,10 @@ public:
 
 	virtual void SetOpacity(ADBaseCharacter* Character) override;
 
+	virtual void SetHighlightObject(ADBaseCharacter* Character) override;
+
+	virtual void RemoveHighlightObject(ADBaseCharacter* Character) override;
+
 	virtual FName GetActionEventName() const override;
 
 	FName GetDesciption();

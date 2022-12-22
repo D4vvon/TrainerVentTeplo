@@ -85,7 +85,7 @@ public: \
 
 
 #define FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_10_PROLOG
-#define FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_22_GENERATED_BODY_LEGACY \
+#define FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_19_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_13_SPARSE_DATA \
@@ -95,7 +95,7 @@ public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_22_GENERATED_BODY \
+#define FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_19_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_Diplom_Source_Diplom_Actors_Interactable_Interactive_h_13_SPARSE_DATA \

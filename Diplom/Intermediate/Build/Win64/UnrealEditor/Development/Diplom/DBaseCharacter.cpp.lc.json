@@ -13,7 +13,9 @@
             "e:\\ue4\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
             "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
             "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
-            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\dbasecharacter.generated.h"
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\dbasecharacter.generated.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\actors\\interactable\\interactive.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\interactive.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

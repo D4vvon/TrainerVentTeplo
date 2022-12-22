@@ -42,7 +42,6 @@ void AComponentOfMechanism::Interact(ADBaseCharacter* Character)
 
 void AComponentOfMechanism::SetOpacity(ADBaseCharacter* Character)
 {
-	//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("SetOpacity"), false));
 	if (!IsValid(BasicMaterial) || !IsValid(InteractMaterial))
 	{
 		return;
@@ -60,6 +59,26 @@ void AComponentOfMechanism::SetOpacity(ADBaseCharacter* Character)
 		isOpascity = false;
 		return;
 	}
+}
+
+void AComponentOfMechanism::SetHighlightObject(ADBaseCharacter* Character)
+{
+	if (!IsValid(IntersectionMaterial))
+	{
+		return;
+	}
+
+	ComponentMesh->SetMaterial(0, IntersectionMaterial);
+}
+
+void AComponentOfMechanism::RemoveHighlightObject(ADBaseCharacter* Character)
+{
+	if (!IsValid(BasicMaterial))
+	{
+		return;
+	}
+
+	ComponentMesh->SetMaterial(0, BasicMaterial);
 }
 
 FName AComponentOfMechanism::GetActionEventName() const

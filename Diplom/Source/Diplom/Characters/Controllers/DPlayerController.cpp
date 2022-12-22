@@ -49,6 +49,14 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 	//PlayerHUDWidget->SetHighLightInteractableActionText(FName("Test"));
 	PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
 	PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
+	if (HasAnyKeys)
+	{
+		CachedBaseCharacter->SetHighlightObject();
+	}
+	else
+	{
+		CachedBaseCharacter->RemoveHighlightObject();
+	}
 
 }
 

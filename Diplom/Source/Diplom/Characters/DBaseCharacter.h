@@ -31,6 +31,8 @@ public:
 
 	virtual void Interact();
 	virtual void SetOpacity();
+	virtual void SetHighlightObject();
+	virtual void RemoveHighlightObject();
 	FOnIntractableObjectFound OnIntractableObjectFound;
 
 protected:
@@ -42,4 +44,5 @@ protected:
 
 	UPROPERTY()
 	TScriptInterface<IInteractable> LineOfSightObject;
+	TScriptInterface<IInteractable> OldLineOfSightObject;
 };

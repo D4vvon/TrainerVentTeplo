@@ -37,6 +37,29 @@ void ADBaseCharacter::SetOpacity()
 	}
 }
 
+void ADBaseCharacter::SetHighlightObject()
+{
+	if (LineOfSightObject.GetInterface())
+	{
+		LineOfSightObject->SetHighlightObject(this);
+		OldLineOfSightObject = LineOfSightObject;
+	}
+}
+
+void ADBaseCharacter::RemoveHighlightObject()
+{
+	if (OldLineOfSightObject.GetInterface())
+	{
+		//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("RemoveEmmission")), false);
+		OldLineOfSightObject->RemoveHighlightObject(this);
+		OldLineOfSightObject = nullptr;
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("Old is not")), false);
+	}
+}
+
 void ADBaseCharacter::TraceLineOfSight()
 {
 	if (!IsPlayerControlled())
