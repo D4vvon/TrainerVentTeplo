@@ -42,20 +42,20 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("PlayerHUD is not valid")), true);
 		return;
 	}
-	//FName ActionKey = FName("Test description");
-	//FName ActionKey = ComponentsOfMechanism->GetDesciption();
-	TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
-	const bool HasAnyKeys = ActionKeys.Num() != 0;
-	//PlayerHUDWidget->SetHighLightInteractableActionText(FName("Test"));
-	PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
-	PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
-	if (HasAnyKeys)
+	if (IsValid(PlayerHUDWidget) && CachedBaseCharacter.IsValid())
 	{
-		CachedBaseCharacter->SetHighlightObject();
-	}
-	else
-	{
-		CachedBaseCharacter->RemoveHighlightObject();
+		TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
+		const bool HasAnyKeys = ActionKeys.Num() != 0;
+		PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
+		PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
+		if (HasAnyKeys)
+		{
+			CachedBaseCharacter->SetHighlightObject();
+		}
+		else
+		{
+			CachedBaseCharacter->RemoveHighlightObject();
+		}
 	}
 
 }

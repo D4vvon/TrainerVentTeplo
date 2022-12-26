@@ -165,7 +165,9 @@
             "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gameplaystaticstypes.generated.h",
             "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gameplaystatics.generated.h",
             "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\dplayercontroller.generated.h",
-            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\componentofmechanism.generated.h"
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\componentofmechanism.generated.h",
+            "e:\\ue4\\ue_5.0\\engine\\source\\runtime\\umg\\public\\blueprint\\widgetlayoutlibrary.h",
+            "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\umg\\widgetlayoutlibrary.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

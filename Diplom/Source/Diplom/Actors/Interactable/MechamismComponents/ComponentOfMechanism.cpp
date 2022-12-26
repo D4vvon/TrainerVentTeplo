@@ -3,6 +3,7 @@
 
 #include "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h"
 #include "Characters/Controllers/DPlayerController.h"
+#include "Blueprint/WidgetLayoutLibrary.h"
 
 // Sets default values
 AComponentOfMechanism::AComponentOfMechanism()
@@ -14,21 +15,16 @@ AComponentOfMechanism::AComponentOfMechanism()
 	ComponentMesh->SetupAttachment(DefaultSceneRoot);
 
 	PrimaryActorTick.bCanEverTick = true;
-	PrimaryActorTick.bStartWithTickEnabled = false;
-
-
-	//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString(TEXT("Fill HUD")), false);
-	//PlayerHUDWidget = Cast<UPlayerHUDWidget>(PlayerHUDWidgetClass);
-
 }
 
 void AComponentOfMechanism::Interact(ADBaseCharacter* Character)
 {
 	GetActionEventName();
 	PlayerHUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass, FName("WBP_PlayerHUD"));
-	PlayerHUDWidget->AddToViewport();
 	if (IsValid(PlayerHUDWidget))
 	{
+		UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		PlayerHUDWidget->AddToViewport();
 		PlayerHUDWidget->SetHighLightInteractableActionText(Description);
 		PlayerHUDWidget->SetHighLightInteractableVisibility(true);
 	}
