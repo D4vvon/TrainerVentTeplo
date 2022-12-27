@@ -20,6 +20,8 @@ void ADPlayerController::SetPawn(APawn* InPawn)
 		CreateAndInitializeWidgets();
 		CachedBaseCharacter->OnIntractableObjectFound.BindUObject(this, &ADPlayerController::OnInteractableObjectFound);
 	}
+
+	PlayerHUDWidget->SetHighLightInteractableVisibility(false);
 }
 
 void ADPlayerController::SetupInputComponent()
@@ -47,13 +49,14 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 		TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
 		const bool HasAnyKeys = ActionKeys.Num() != 0;
 		PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
-		PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
 		if (HasAnyKeys)
 		{
+			PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
 			CachedBaseCharacter->SetHighlightObject();
 		}
 		else
 		{
+			PlayerHUDWidget->SetHighLightInteractableVisibility(false);
 			CachedBaseCharacter->RemoveHighlightObject();
 		}
 	}
@@ -122,6 +125,13 @@ void ADPlayerController::Interact()
 {
 	if (CachedBaseCharacter.IsValid())
 	{
+		//TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction("ActionInteract");
+		//const bool HasAnyKeys = ActionKeys.Num() != 0;
+		//PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
+		//if (!HasAnyKeys)
+		//{
+		//	PlayerHUDWidget->SetHighLightInteractableVisibility(false);
+		//}
 		CachedBaseCharacter->Interact();
 	}
 }
