@@ -62,6 +62,14 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_IntersectionMaterial_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_IntersectionMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_HotMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_HotMaterial;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ColdMaterial_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_ColdMaterial;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -127,6 +135,20 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial = { "IntersectionMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, IntersectionMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_HotMaterial_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_HotMaterial = { "HotMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, HotMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_HotMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_HotMaterial_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ColdMaterial_MetaData[] = {
+		{ "Category", "Widgets" },
+		{ "ModuleRelativePath", "Actors/Interactable/MechamismComponents/ComponentOfMechanism.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ColdMaterial = { "ColdMaterial", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AComponentOfMechanism, ColdMaterial), Z_Construct_UClass_UMaterial_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ColdMaterial_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ColdMaterial_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AComponentOfMechanism_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ComponentMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_PlayerHUDWidgetClass,
@@ -135,6 +157,8 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_BasicMaterial,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_InteractMaterial,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_IntersectionMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_HotMaterial,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AComponentOfMechanism_Statics::NewProp_ColdMaterial,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AComponentOfMechanism_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractable_NoRegister, (int32)VTABLE_OFFSET(AComponentOfMechanism, IInteractable), false },  // 3016754657
@@ -175,9 +199,9 @@ void EmptyLinkFunctionForGeneratedCodeComponentOfMechanism() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_AComponentOfMechanism, AComponentOfMechanism::StaticClass, TEXT("AComponentOfMechanism"), &Z_Registration_Info_UClass_AComponentOfMechanism, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AComponentOfMechanism), 1560052422U) },
+		{ Z_Construct_UClass_AComponentOfMechanism, AComponentOfMechanism::StaticClass, TEXT("AComponentOfMechanism"), &Z_Registration_Info_UClass_AComponentOfMechanism, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AComponentOfMechanism), 1854200978U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_3884893412(TEXT("/Script/Diplom"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_1995574463(TEXT("/Script/Diplom"),
 		Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Diplom_Source_Diplom_Actors_Interactable_MechamismComponents_ComponentOfMechanism_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

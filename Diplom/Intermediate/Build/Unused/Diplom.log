@@ -1,17 +1,23 @@
 ﻿  Using bundled DotNet SDK
   Log file: C:\Users\dokto\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (E:\Ychebka\TrainerVentTeplo).
+  Invalidating makefile for DiplomEditor (working set of source files changed)
+  Parsing headers for DiplomEditor
+    Running UnrealHeaderTool "E:\Ychebka\TrainerVentTeplo\Diplom\Diplom.uproject" "E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\DiplomEditor\Development\DiplomEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\dokto\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for DiplomEditor in 0,9281184 seconds
   Building DiplomEditor...
   Using Visual Studio 2019 14.29.30146 toolchain (E:\VS\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from Diplom unity file: DPlayerController.cpp
+  [Adaptive Build] Excluded from Diplom unity file: ComponentOfMechanism.cpp, TeploControlUI.cpp
   Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
     Executing up to 8 processes, one per physical core
-  Building 4 actions with 4 processes...
-  [1/4] Compile DPlayerController.cpp
-  [2/4] Link UnrealEditor-Diplom.lib
+  Building 6 actions with 6 processes...
+  [1/6] Compile Diplom.init.gen.cpp
+  [2/6] Compile TeploControlUI.cpp
+  [3/6] Compile TeploControlUI.gen.cpp
+  [4/6] Link UnrealEditor-Diplom.lib
      Создается библиотека E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\UnrealEditor\Development\Diplom\UnrealEditor-Diplom.lib и объект E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\UnrealEditor\Development\Diplom\UnrealEditor-Diplom.exp
-  [3/4] Link UnrealEditor-Diplom.dll
+  [5/6] Link UnrealEditor-Diplom.dll
      Создается библиотека E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\UnrealEditor\Development\Diplom\UnrealEditor-Diplom.suppressed.lib и объект E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\UnrealEditor\Development\Diplom\UnrealEditor-Diplom.suppressed.exp
-  [4/4] WriteMetadata DiplomEditor.target
-  Total time in Parallel executor: 5,00 seconds
-  Total execution time: 5,39 seconds
+  [6/6] WriteMetadata DiplomEditor.target
+  Total time in Parallel executor: 5,10 seconds
+  Total execution time: 7,10 seconds

@@ -28,6 +28,10 @@ public:
 
 	virtual FName GetActionEventName() const override;
 
+	void PlusTemp();
+
+	void SubTemp();
+
 	FName GetDesciption();
 
 	UPlayerHUDWidget* PlayerHUDWidget;
@@ -53,6 +57,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	UMaterial* IntersectionMaterial;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UMaterial* HotMaterial;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	UMaterial* ColdMaterial;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

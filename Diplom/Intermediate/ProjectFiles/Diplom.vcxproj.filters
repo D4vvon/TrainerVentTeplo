@@ -143,5 +143,11 @@
     <ClInclude Include="..\..\Source\Diplom\UI\PlayerHUDWidget.h">
       <Filter>Source\Diplom\UI</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\UI\TeploControlUI.cpp">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\UI\TeploControlUI.h">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

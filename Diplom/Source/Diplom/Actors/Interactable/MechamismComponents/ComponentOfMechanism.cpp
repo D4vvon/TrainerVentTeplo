@@ -92,6 +92,16 @@ FName AComponentOfMechanism::GetActionEventName() const
 	return FName("ActionInteract");
 }
 
+void AComponentOfMechanism::PlusTemp()
+{
+	ComponentMesh->SetMaterial(0, HotMaterial);
+}
+
+void AComponentOfMechanism::SubTemp()
+{
+	ComponentMesh->SetMaterial(0, ColdMaterial);
+}
+
 FName AComponentOfMechanism::GetDesciption()
 {
 	return FName("Test Description");
