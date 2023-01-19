@@ -48,6 +48,7 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 	{
 		TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
 		const bool HasAnyKeys = ActionKeys.Num() != 0;
+
 		PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
 		if (HasAnyKeys)
 		{
