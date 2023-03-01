@@ -1,5 +1,6 @@
 E:\Ychebka\TrainerVentTeplo\Diplom\Intermediate\Build\Win64\UnrealEditor\Inc\Diplom\DPlayerController.gen.cpp
 /I .
+/I E:\Ychebka\TrainerVentTeplo\Diplom\Source\Diplom
 /I ..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine
 /I Runtime
 /I ..\Shaders\Shared

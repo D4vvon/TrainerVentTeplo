@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="..\..\Diplom.uproject" />
     <Filter Include="Source">
@@ -11,6 +11,7 @@
     <None Include="..\..\Source\DiplomEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -147,6 +148,12 @@
       <Filter>Source\Diplom\UI</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Diplom\UI\TeploControlUI.h">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Diplom\UI\VentilationUI.cpp">
+      <Filter>Source\Diplom\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Diplom\UI\VentilationUI.h">
       <Filter>Source\Diplom\UI</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplom.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\diplomeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\development\\diplom\\definitions.diplom.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplom.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

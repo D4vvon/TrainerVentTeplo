@@ -2,8 +2,8 @@
 
 
 #include "PlayerCharacter.h"
-#include "../../../../../../UE4/UE_5.0/Engine/Source/Runtime/Engine/Classes/GameFramework/SpringArmComponent.h"
-#include "../../../../../../UE4/UE_5.0/Engine/Source/Runtime/Engine/Classes/Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "Camera/CameraComponent.h"
 #include "GameFramework/PlayerController.h"
 
 APlayerCharacter::APlayerCharacter()

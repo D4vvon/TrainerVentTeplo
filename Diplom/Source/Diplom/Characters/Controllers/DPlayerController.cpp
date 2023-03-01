@@ -154,7 +154,7 @@ void ADPlayerController::CreateAndInitializeWidgets()
 		if (IsValid(PlayerHUDWidget))
 		{
 			//GEngine->AddOnScreenDebugMessage(1, 1.0f, FColor::Green, FString(TEXT("PlayerHUDAdded")), false);
-			PlayerHUDWidget->AddToViewport();
+			//PlayerHUDWidget->AddToViewport();
 		}
 	}
 }

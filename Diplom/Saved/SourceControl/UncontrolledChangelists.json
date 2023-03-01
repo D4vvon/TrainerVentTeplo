@@ -1,0 +1,27 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/WBP_VentControl.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/WBP_MainMenu.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/Z7/W1SXRCM1KAKBJOIZDLHZ47.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/WBP_HighlightInteractable.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/WBP_PlayerHUD.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/PlayerController/BP_PlayerController.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/53/Q0PLXGEX1FC8FGFPH49EH4.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/WBP_VentilationUI.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/Images/controller_bckg.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/Images/pimp.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/Images/norma_highlight.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/UI/Images/avaria_highlight.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/Mechanism/InteractableComponents/BP_Vent.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/Mechanism/InteractableComponents/Fan.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/54/V99I6MDW8P0VPY0AUXV0AU.uasset",
+				"E:/Ychebka/TrainerVentTeplo/Diplom/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/0/XV/VTAF5COFGLO9YT51MQCVTR.uasset"
+			]
+		}
+	]
+}

@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "../../../../../../UE4/UE_5.0/Engine/Source/Runtime/UMG/Public/Blueprint/UserWidget.h"
+#include "Blueprint/UserWidget.h"
 #include "Components/TextBlock.h"
 #include "PlayerHUDWidget.generated.h"
 

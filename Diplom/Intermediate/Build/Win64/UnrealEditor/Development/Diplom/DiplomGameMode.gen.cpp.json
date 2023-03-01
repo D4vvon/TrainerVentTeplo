@@ -1,5 +1,5 @@
 {
-    "Version": "1.1",
+    "Version": "1.2",
     "Data": {
         "Source": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\diplomgamemode.gen.cpp",
         "ProvidedModule": "",
@@ -7,10 +7,10 @@
         "Includes": [
             "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\development\\diplom\\definitions.diplom.h",
             "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplomgamemode.h",
-            "e:\\ue4\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
-            "e:\\ue4\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
-            "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
-            "e:\\ue4\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "e:\\ue4\\ue\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "e:\\ue4\\ue\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "e:\\ue4\\ue\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "e:\\ue4\\ue\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
             "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\diplomgamemode.generated.h"
         ],
         "ImportedModules": [],

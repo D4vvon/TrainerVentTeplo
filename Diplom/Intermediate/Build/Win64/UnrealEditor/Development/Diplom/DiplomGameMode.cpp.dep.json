@@ -1,0 +1,27 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplomgamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\diplomeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\development\\diplom\\definitions.diplom.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplomgamemode.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\uht\\diplomgamemode.generated.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\source\\diplom\\diplomcharacter.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "e:\\ue4\\ue\\ue_5.1\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "e:\\ychebka\\trainerventteplo\\diplom\\intermediate\\build\\win64\\unrealeditor\\inc\\diplom\\uht\\diplomcharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
