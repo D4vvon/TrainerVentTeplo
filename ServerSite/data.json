@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "bIsWorked": "False",
+      "t_out_air": 25,
+      "t_out_water": 40,
+      "fanSpeed": 50,
+      "t_in_air": 20,
+      "bIsAvaria": "False",
+      "bIsAuto": "False",
+      "t_main": 80,
+      "t_1": 79,
+      "t_2": 78,
+      "t_out_main": 40,
+      "t_out_2": 37
+    }
+  ]

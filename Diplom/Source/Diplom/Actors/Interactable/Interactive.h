@@ -19,6 +19,8 @@ class DIPLOM_API IInteractable
 	GENERATED_BODY()
 public:
 	virtual void Interact(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::Interact, );
+	virtual void ClickQuest(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::ClickQuest, );
+	virtual FName GetDescription() const PURE_VIRTUAL(IInteractable::GetDescription(), return FName(NAME_None););
 	virtual void SetOpacity(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::SetOpacity, );
 	virtual void SetHighlightObject(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::SetHighlightObject, );
 	virtual void RemoveHighlightObject(ADBaseCharacter* Character) PURE_VIRTUAL(IInteractable::RemoveHighlightObject, );

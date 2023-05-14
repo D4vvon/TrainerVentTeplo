@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "Http.h"
 #include "DiplomGameMode.generated.h"
 
 UCLASS(minimalapi)
@@ -13,6 +14,12 @@ class ADiplomGameMode : public AGameModeBase
 
 public:
 	ADiplomGameMode();
+
+	virtual void StartPlay() override;
+
+private:
+	
+	void OnResponseReceived(FHttpRequestPtr Request, FHttpResponsePtr Response, bool bConnectedSuccessfully);
 };
 
 

@@ -20,6 +20,8 @@ public:
 
 	virtual void Interact(ADBaseCharacter* Character) override;
 
+	virtual void ClickQuest(ADBaseCharacter* Character) override;
+
 	virtual void SetOpacity(ADBaseCharacter* Character) override;
 
 	virtual void SetHighlightObject(ADBaseCharacter* Character) override;
@@ -27,6 +29,8 @@ public:
 	virtual void RemoveHighlightObject(ADBaseCharacter* Character) override;
 
 	virtual FName GetActionEventName() const override;
+
+	bool GetIsMovable();
 
 	void PlusTemp();
 
@@ -64,6 +68,11 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	UMaterial* ColdMaterial;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	bool bIsMovable = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
+	AActor* BP_ToDisable;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -73,5 +82,5 @@ public:
 
 	bool isOpascity = false;
 
-
+	bool bIsVisibleFluids = true;
 };

@@ -17,8 +17,34 @@ public:
 
 	void SetHighLightInteractableActionText(FName KeyName);
 
+	bool GetIsQuest();
+
+	void SetIsQuest(bool IsQuest_);
+
+	void SetVisibilityToBorderQuest();
+
+	void UpdateTextToPrint();
+
+	void SetTextToBorderText(FName TextToPrint);
+
 protected:
 	UPROPERTY(meta = (BindWidget))
 	class UHighLightInteractable* InteractableKey = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UVentilationUI* ventUI;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTeploControlUI* teploUI;
+
+	UPROPERTY(BlueprintReadWrite)
+	bool bIsQuest = false;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UBorder* BorderForQuest;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	class UTextBlock* TextForQuest;
+
 
 };

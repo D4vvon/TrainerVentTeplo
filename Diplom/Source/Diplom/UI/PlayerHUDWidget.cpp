@@ -4,6 +4,7 @@
 #include "UI/PlayerHUDWidget.h"
 #include "HighLightInteractable.h"
 #include "Components/TextBlock.h"
+#include "Components/Border.h"
 
 void UPlayerHUDWidget::SetHighLightInteractableVisibility(bool bIsVisible)
 {
@@ -14,11 +15,11 @@ void UPlayerHUDWidget::SetHighLightInteractableVisibility(bool bIsVisible)
 		return;
 	}
 
-	if (bIsVisible)
+	if (bIsVisible && IsValid(InteractableKey))
 	{
 		InteractableKey->SetVisibility(ESlateVisibility::Visible);
 	}
-	else
+	else if (!bIsVisible)
 	{
 		InteractableKey->SetVisibility(ESlateVisibility::Hidden);
 	}
@@ -36,3 +37,28 @@ void UPlayerHUDWidget::SetHighLightInteractableActionText(FName KeyName)
 
 }
 
+bool UPlayerHUDWidget::GetIsQuest()
+{
+	GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT(" %s"), bIsQuest, true));
+	return bIsQuest;
+}
+
+void UPlayerHUDWidget::SetIsQuest(bool IsQuest_)
+{
+	bIsQuest = IsQuest_;
+}
+
+void UPlayerHUDWidget::SetVisibilityToBorderQuest()
+{
+	BorderForQuest->SetVisibility(ESlateVisibility::Visible);
+}
+
+void UPlayerHUDWidget::UpdateTextToPrint()
+{
+	InteractableKey->SetActionText(" ");
+}
+
+void UPlayerHUDWidget::SetTextToBorderText(FName TextToPrint)
+{
+
+}

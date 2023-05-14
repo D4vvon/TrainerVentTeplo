@@ -19,9 +19,16 @@ class DIPLOM_API ADPlayerController : public APlayerController
 public:
 	virtual void SetPawn(APawn* InPawn) override;
 
+	void GetHUD(FName description);
+
 	//UPlayerHUDWidget* GetPlayerHUDWidget();
 
 	UPlayerHUDWidget* PlayerHUDWidget = nullptr;
+
+	UPlayerHUDWidget* PHW;
+
+	void CreateAndInitializeWidgets();
+
 protected:
 	virtual void SetupInputComponent() override;
 
@@ -30,6 +37,7 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Widgets")
 	TSubclassOf<class AComponentOfMechanism> CopmonentOfMechanismClass;
+
 
 private:
 	void OnInteractableObjectFound(FName ActionName);
@@ -45,8 +53,8 @@ private:
 
 	void Interact();
 	void SetOpacity();
+	void ClickQuest();
 
-	void CreateAndInitializeWidgets();
 
 
 	APlayerController* PlayerController;

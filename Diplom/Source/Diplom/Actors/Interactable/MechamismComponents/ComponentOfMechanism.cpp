@@ -21,18 +21,51 @@ void AComponentOfMechanism::Interact(ADBaseCharacter* Character)
 {
 	GetActionEventName();
 	PlayerHUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass, FName("WBP_PlayerHUD"));
+	//need to fix
+	//PlayerHUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass, FName("/Script/UMGEditor.WidgetBlueprint'/Game/UI/WBP_PlayerHUD.WBP_PlayerHUD'"));
 	if (IsValid(PlayerHUDWidget))
 	{
-		UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		//UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
 		PlayerHUDWidget->AddToViewport();
+		PlayerHUDWidget->SetIsQuest(false);
 		PlayerHUDWidget->SetHighLightInteractableActionText(Description);
 		PlayerHUDWidget->SetHighLightInteractableVisibility(true);
+		//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("%s"), PlayerHUDWidget, false));
 	}
 	else
 	{
 		FString errorClass = typeid(PlayerHUDWidget).name();
 		bool isNull = IsValid(PlayerHUDWidget);
-		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Object is not valid, %s"), isNull, false));
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Object is not valid, %s"), PlayerHUDWidget, false));
+	}
+
+	if (bIsMovable)
+	{
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Object is movable(clapan)"), false));
+		BP_ToDisable->SetActorHiddenInGame(bIsVisibleFluids);
+		bIsVisibleFluids = !bIsVisibleFluids;
+	}
+}
+
+void AComponentOfMechanism::ClickQuest(ADBaseCharacter* Character)
+{
+	GetActionEventName();
+	//need to fix
+	//PlayerHUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass, FName("/Script/UMGEditor.WidgetBlueprint'/Game/UI/WBP_PlayerHUD.WBP_PlayerHUD'"));
+	//PlayerHUDWidget = CreateWidget<UPlayerHUDWidget>(GetWorld(), PlayerHUDWidgetClass, FName("WBP_PlayerHUD"));
+	
+	if (IsValid(PlayerHUDWidget))
+	{
+		//UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		PlayerHUDWidget->AddToViewport();
+		PlayerHUDWidget->SetVisibilityToBorderQuest();
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Clicked"), false));
+	}
+	else
+	{
+		FString errorClass = typeid(PlayerHUDWidget).name();
+		bool isNull = IsValid(PlayerHUDWidget);
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Object is not valid, %s"), PlayerHUDWidget, false));
 	}
 }
 
@@ -90,6 +123,11 @@ void AComponentOfMechanism::RemoveHighlightObject(ADBaseCharacter* Character)
 FName AComponentOfMechanism::GetActionEventName() const
 {
 	return FName("ActionInteract");
+}
+
+bool AComponentOfMechanism::GetIsMovable()
+{
+	return bIsMovable;
 }
 
 void AComponentOfMechanism::PlusTemp()

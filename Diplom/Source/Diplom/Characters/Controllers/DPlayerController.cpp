@@ -18,10 +18,32 @@ void ADPlayerController::SetPawn(APawn* InPawn)
 	if (IsLocalController() && CachedBaseCharacter.IsValid())
 	{
 		CreateAndInitializeWidgets();
+		//PHW = PlayerHUDWidget;
 		CachedBaseCharacter->OnIntractableObjectFound.BindUObject(this, &ADPlayerController::OnInteractableObjectFound);
 	}
 
 	PlayerHUDWidget->SetHighLightInteractableVisibility(false);
+	//FName test = "test";
+	//GetHUD(test);
+}
+
+void ADPlayerController::GetHUD(FName description)
+{
+	if (IsValid(PlayerHUDWidget))
+	{
+		//UWidgetLayoutLibrary::RemoveAllWidgets(GetWorld());
+		//PlayerHUDWidget->AddToViewport();
+		PlayerHUDWidget->SetIsQuest(false);
+		PlayerHUDWidget->SetHighLightInteractableActionText(description);
+		PlayerHUDWidget->SetHighLightInteractableVisibility(true);
+		//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("%s"), PlayerHUDWidget, false));
+	}
+	else
+	{
+		FString errorClass = typeid(PlayerHUDWidget).name();
+		bool isNull = IsValid(PlayerHUDWidget);
+		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Green, FString::Printf(TEXT("Object is not valid, %s"), PlayerHUDWidget, false));
+	}
 }
 
 void ADPlayerController::SetupInputComponent()
@@ -34,8 +56,10 @@ void ADPlayerController::SetupInputComponent()
 	InputComponent->BindAction("Jump", EInputEvent::IE_Pressed, this, &ADPlayerController::Jump);
 	InputComponent->BindAction("ShowCursor", EInputEvent::IE_Pressed, this, &ADPlayerController::ChangeMouseCursor);
 	InputComponent->BindAction("ActionInteract", EInputEvent::IE_Pressed, this, &ADPlayerController::Interact);
+	InputComponent->BindAction("ActionClickQuest", EInputEvent::IE_Pressed, this, &ADPlayerController::ClickQuest);
 	InputComponent->BindAction("SetOpacity", EInputEvent::IE_Pressed, this, &ADPlayerController::SetOpacity);
 }
+
 
 void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 {
@@ -49,7 +73,7 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 		TArray<FInputActionKeyMapping> ActionKeys = PlayerInput->GetKeysForAction(ActionName);
 		const bool HasAnyKeys = ActionKeys.Num() != 0;
 
-		PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
+		//PlayerHUDWidget->SetHighLightInteractableVisibility(HasAnyKeys);
 		if (HasAnyKeys)
 		{
 			PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
@@ -57,6 +81,7 @@ void ADPlayerController::OnInteractableObjectFound(FName ActionName)
 		}
 		else
 		{
+			PlayerHUDWidget->SetHighLightInteractableActionText(FName(" "));
 			PlayerHUDWidget->SetHighLightInteractableVisibility(false);
 			CachedBaseCharacter->RemoveHighlightObject();
 		}
@@ -100,7 +125,7 @@ void ADPlayerController::Jump()
 {
 	if (CachedBaseCharacter.IsValid())
 	{
-		CachedBaseCharacter->Jump();
+		//CachedBaseCharacter->Jump();
 	}
 }
 
@@ -110,14 +135,12 @@ void ADPlayerController::ChangeMouseCursor()
 	{
 		PlayerController->bShowMouseCursor = true;
 		PlayerController->SetInputMode(FInputModeGameAndUI());
-		//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("MC set to true")), true);
 		return;
 	}
 	else if (PlayerController->bShowMouseCursor == true)
 	{
 		PlayerController->bShowMouseCursor = false;
 		PlayerController->SetInputMode(FInputModeGameOnly());
-		//GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("MC set to false")), true);
 		return;
 	}
 }
@@ -133,6 +156,7 @@ void ADPlayerController::Interact()
 		//{
 		//	PlayerHUDWidget->SetHighLightInteractableVisibility(false);
 		//}
+		//PlayerController->Get
 		CachedBaseCharacter->Interact();
 	}
 }
@@ -145,6 +169,11 @@ void ADPlayerController::SetOpacity()
 	}
 }
 
+void ADPlayerController::ClickQuest()
+{
+	CachedBaseCharacter->ClickQuest();
+}
+
 void ADPlayerController::CreateAndInitializeWidgets()
 {
 	if (!IsValid(PlayerHUDWidget))
@@ -155,6 +184,7 @@ void ADPlayerController::CreateAndInitializeWidgets()
 		{
 			//GEngine->AddOnScreenDebugMessage(1, 1.0f, FColor::Green, FString(TEXT("PlayerHUDAdded")), false);
 			//PlayerHUDWidget->AddToViewport();
+			PlayerHUDWidget->SetHighLightInteractableVisibility(false);
 		}
 	}
 }

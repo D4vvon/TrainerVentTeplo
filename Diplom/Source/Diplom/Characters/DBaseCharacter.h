@@ -30,9 +30,12 @@ public:
 	virtual void ChangeMouseCursor() {};
 
 	virtual void Interact();
+	virtual void ClickQuest();
 	virtual void SetOpacity();
 	virtual void SetHighlightObject();
 	virtual void RemoveHighlightObject();
+
+	virtual FName GetDescription();
 	FOnIntractableObjectFound OnIntractableObjectFound;
 
 protected:

@@ -29,6 +29,14 @@ void ADBaseCharacter::Interact()
 	}
 }
 
+void ADBaseCharacter::ClickQuest()
+{
+	if (LineOfSightObject.GetInterface())
+	{
+		LineOfSightObject->ClickQuest(this);
+	}
+}
+
 void ADBaseCharacter::SetOpacity()
 {
 	if (LineOfSightObject.GetInterface())
@@ -58,6 +66,11 @@ void ADBaseCharacter::RemoveHighlightObject()
 	{
 		GEngine->AddOnScreenDebugMessage(1, 2.0f, FColor::Red, FString(TEXT("Old is not")), false);
 	}
+}
+
+FName ADBaseCharacter::GetDescription()
+{
+	return LineOfSightObject->GetDescription();
 }
 
 void ADBaseCharacter::TraceLineOfSight()
