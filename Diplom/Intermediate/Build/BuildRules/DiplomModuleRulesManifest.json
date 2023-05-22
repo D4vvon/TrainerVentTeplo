@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Diplom\\Diplom\\Source\\Diplom\\Diplom.Build.cs",
+		"D:\\Diplom\\Diplom\\Source\\Diplom.Target.cs",
+		"D:\\Diplom\\Diplom\\Source\\DiplomEditor.Target.cs"
+	],
+	"EngineVersion": "5.1.1"
+}

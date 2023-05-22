@@ -73,7 +73,6 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Widgets")
 	AActor* BP_ToDisable;
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 public:	

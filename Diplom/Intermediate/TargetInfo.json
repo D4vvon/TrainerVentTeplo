@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Diplom",
+			"Path": "D:\\Diplom\\Diplom\\Source\\Diplom.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "DiplomEditor",
+			"Path": "D:\\Diplom\\Diplom\\Source\\DiplomEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
